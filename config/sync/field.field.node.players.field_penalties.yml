@@ -1,0 +1,23 @@
+uuid: ece0e8aa-177e-494f-b0d2-fbd6ce869cf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_penalties
+    - node.type.players
+id: node.players.field_penalties
+field_name: field_penalties
+entity_type: node
+bundle: players
+label: Penalties
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

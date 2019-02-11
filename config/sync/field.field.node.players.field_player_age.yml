@@ -1,0 +1,23 @@
+uuid: 393aba31-97e1-459b-a088-9ade5c471bf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_player_age
+    - node.type.players
+id: node.players.field_player_age
+field_name: field_player_age
+entity_type: node
+bundle: players
+label: 'Player Age'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

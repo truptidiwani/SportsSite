@@ -1,0 +1,34 @@
+uuid: 091165f0-23b7-4c8a-aeeb-0a42e22da913
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - node
+    - system
+  theme:
+    - bartik
+_core:
+  default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
+id: bartik_tools
+theme: bartik
+region: highlighted
+weight: -5
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: News
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      news_updates: news_updates
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

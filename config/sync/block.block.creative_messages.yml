@@ -1,0 +1,22 @@
+uuid: 9a4cf79f-c5c4-4d59-be79-020efb1ad6e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - creative
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: creative_messages
+theme: creative
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

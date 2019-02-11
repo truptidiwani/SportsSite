@@ -1,0 +1,22 @@
+uuid: b4048b27-3b23-439b-af72-ea631dbd88c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - professional_theme
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: professional_theme_messages
+theme: professional_theme
+region: top
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

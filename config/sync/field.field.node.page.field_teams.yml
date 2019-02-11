@@ -1,0 +1,45 @@
+uuid: 0a4c2b4a-748e-4eee-bb15-ed6827e8c774
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teams
+    - node.type.page
+    - taxonomy.vocabulary.teams
+  content:
+    - 'taxonomy_term:teams:07cef3ec-c549-4e92-bb90-3608dec8c519'
+    - 'taxonomy_term:teams:18d85f02-0ef8-4ef8-8f45-a6347a1fa932'
+    - 'taxonomy_term:teams:1ff3ddf0-c9f4-41d6-a35f-6efa455690e4'
+    - 'taxonomy_term:teams:53a31569-71dd-4fb1-b164-532d366e4b6e'
+    - 'taxonomy_term:teams:ce3689ec-39a1-4e29-9a33-f5c96ef84984'
+id: node.page.field_teams
+field_name: field_teams
+entity_type: node
+bundle: page
+label: Teams
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 1ff3ddf0-c9f4-41d6-a35f-6efa455690e4
+  -
+    target_uuid: 07cef3ec-c549-4e92-bb90-3608dec8c519
+  -
+    target_uuid: ce3689ec-39a1-4e29-9a33-f5c96ef84984
+  -
+    target_uuid: 53a31569-71dd-4fb1-b164-532d366e4b6e
+  -
+    target_uuid: 18d85f02-0ef8-4ef8-8f45-a6347a1fa932
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      teams: teams
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

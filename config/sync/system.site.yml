@@ -1,0 +1,14 @@
+uuid: 15bc1752-9cd6-4634-ac61-c72d5da52957
+name: SportsSite
+mail: diwanitrupti@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

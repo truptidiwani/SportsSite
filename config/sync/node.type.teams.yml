@@ -1,0 +1,18 @@
+uuid: 7f9fc097-8e3a-43b8-955f-4d6d892f616f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Teams
+type: teams
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

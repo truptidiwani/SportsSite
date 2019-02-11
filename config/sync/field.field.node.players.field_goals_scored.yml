@@ -1,0 +1,23 @@
+uuid: c35e27f3-2250-47e0-89ce-2da2396b26b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_goals_scored
+    - node.type.players
+id: node.players.field_goals_scored
+field_name: field_goals_scored
+entity_type: node
+bundle: players
+label: 'Goals Scored'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

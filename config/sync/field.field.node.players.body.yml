@@ -1,0 +1,22 @@
+uuid: 7ed715dc-ad52-426b-bc7b-61fe4ff24ca6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.players
+  module:
+    - text
+id: node.players.body
+field_name: body
+entity_type: node
+bundle: players
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,22 @@
+uuid: 4b79782f-2e4f-4cf8-a09f-b05e437b6ed4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - isosceles_theme
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: isosceles_theme_powered
+theme: isosceles_theme
+region: logo
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

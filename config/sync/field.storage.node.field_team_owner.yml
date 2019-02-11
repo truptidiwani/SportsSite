@@ -1,0 +1,20 @@
+uuid: 1f2ed088-9135-47e7-8ef5-af5a5707a693
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_team_owner
+field_name: field_team_owner
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

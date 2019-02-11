@@ -1,0 +1,45 @@
+uuid: 3bb574ff-d748-47b6-9ee8-89eec6134ed2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.teams.body
+    - field.field.node.teams.field_team_
+    - field.field.node.teams.field_team_name
+    - field.field.node.teams.field_team_owner
+    - node.type.teams
+  module:
+    - image
+    - text
+    - user
+id: node.teams.teaser
+targetEntityType: node
+bundle: teams
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_team_:
+    type: image
+    weight: 2
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_team_name: true
+  field_team_owner: true
