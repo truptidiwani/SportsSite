@@ -1,0 +1,26 @@
+<div id="fixtures">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div class="fixtures-text text-center">
+          <div class="section-title">
+              <h2>FIXTURES</h2>
+            </div>
+      <div class="col-xs-12 col-md-12">
+        <table class="table table-bordered table-inverse">
+          <tbody>
+            {% for result in view.result %}
+            <tr>
+                <td>{{ view.field.field_match_date.value(view.result[loop.index-1]) |date("M d, Y") | upper }}</td>
+                <td>{{ view.field.title.value(view.result[loop.index-1]) }}</td>
+                <td>{{ view.field.field_sub_title_.value(view.result[loop.index-1]) | upper }}</td>
+            {% endfor %}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

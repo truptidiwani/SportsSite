@@ -1,0 +1,25 @@
+<div id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div class="blog-text text-center">
+          <div class="section-title">
+              <h2>BLOG</h2>
+          </div>
+          <div class="item">
+            {% for row in rows %}
+             {%
+               set row_classes = [
+                 default_row_class ? 'views-row',
+               ]
+             %}
+             <div {{ row.attributes.addClass(row_classes) }}>
+               {{ row.content }}
+             </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

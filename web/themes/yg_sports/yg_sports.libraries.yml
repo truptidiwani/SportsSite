@@ -1,0 +1,226 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+      css/custom.css: {}
+      css/font-awesome/css/font-awesome.min.css: {}
+      css/nivo-lightbox/nivo-lightbox.css: {}
+      css/nivo-lightbox/default.css: {}
+      
+  js:
+    js/nivo-lightbox.js: {}
+    js/main.js: {}
+
+young_sports.skin.blue:
+  version: 1.x
+  css:
+    theme:
+      css/skins/blue/template.css: {}
+      css/skins/blue/bootstrap.css: {}
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal      
+
+young_sports.skin.light_blue:
+  version: 1.x
+  css:
+    theme:
+      css/skins/light_blue/template.css: {}
+      css/skins/light_blue/bootstrap.css: {} 
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal      
+
+young_sports.skin.brown:
+  version: 1.x
+  css:
+    theme:
+      css/skins/brown/template.css: {}
+      css/skins/brown/bootstrap.css: {}
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal      
+
+young_sports.skin.green:
+  version: 1.x
+  css:
+    theme:
+      css/skins/green/template.css: {}
+      css/skins/green/bootstrap.css: {}
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal      
+
+young_sports.skin.lilac:
+  version: 1.x
+  css:
+    theme:
+      css/skins/lilac/template.css: {}
+      css/skins/lilac/bootstrap.css: {} 
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal      
+
+young_sports.skin.lime_green:
+  version: 1.x
+  css:
+    theme:
+      css/skins/lime_green/template.css: {}
+      css/skins/lime_green/bootstrap.css: {} 
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal      
+
+
+young_sports.skin.orange:
+  version: 1.x
+  css:
+    theme:
+      css/skins/orange/template.css: {}
+      css/skins/orange/bootstrap.css: {}
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal      
+
+young_sports.skin.pink:
+  version: 1.x
+  css:
+    theme:
+      css/skins/pink/template.css: {}
+      css/skins/pink/bootstrap.css: {} 
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal      
+
+young_sports.skin.purple:
+  version: 1.x
+  css:
+    theme:
+      css/skins/purple/template.css: {}
+      css/skins/purple/bootstrap.css: {}
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal
+
+young_sports.skin.default:
+  version: 1.x
+  css:
+    theme:
+      css/skins/red/template.css: {}
+      css/skins/red/bootstrap.css: {}
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal           
+
+young_sports.skin.red:
+  version: 1.x
+  css:
+    theme:
+      css/skins/red/template.css: {}
+      css/skins/red/bootstrap.css: {}
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal      
+
+young_sports.skin.turquoise:
+  version: 1.x
+  css:
+    theme:
+      css/skins/turquoise/template.css: {}
+      css/skins/turquoise/bootstrap.css: {} 
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal      
+
+young_sports.skin.turquoise2:
+  version: 1.x
+  css:
+    theme:
+      css/skins/turquoise2/template.css: {}
+      css/skins/turquoise2/bootstrap.css: {} 
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal      
+
+young_sports.skin.violet_red:
+  version: 1.x
+  css:
+    theme:
+      css/skins/violet_red/template.css: {}
+      css/skins/violet_red/bootstrap.css: {}
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal      
+
+young_sports.skin.violet_red2:
+  version: 1.x
+  css:
+    theme:
+      css/skins/violet_red2/template.css: {}
+      css/skins/violet_red2/bootstrap.css: {} 
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal
+
+young_sports.skin.yellow:
+  version: 1.x
+  css:
+    theme:
+      css/skins/yellow/template.css: {}
+      css/skins/yellow/bootstrap.css: {}    
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/modernizr
+      - core/drupal
+
+
+sports-bootstrap:
+  version: 1.x
+  css:
+    theme:
+      includes/bootstrap/css/bootstrap.min.css: {}
+  js:
+    includes/bootstrap/js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+
+young_sports_admin:
+  version: VERSION
+  css:
+    theme:
+      css/theme-settings.css: {}

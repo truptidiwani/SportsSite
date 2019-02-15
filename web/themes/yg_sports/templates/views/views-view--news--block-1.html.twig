@@ -1,0 +1,34 @@
+<!-- News Section -->
+<div id="news">
+  <div class="container">
+      <div class="col-md-12">
+        <div class="section-title">
+            <div class="col-md-12">
+              <h2>NEWS</h2>
+            </div>
+      </div>
+      <div id="carousel-news" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            {% for result in view.result %}
+              <li data-target="#carousel-news" data-slide-to="{{ loop.index-1 }}" class="{% if ( loop.index == 1 )  %}active{% endif %}"></li>
+            {% endfor %}
+          </ol>
+          <div class="carousel-inner">
+            {% for result in view.result %}
+              <div class="item {% if ( loop.index == 1 )  %}active{% endif %}">
+                <div class="col-md-12">
+                  <div class="news">
+                    <div class="news-content">
+                      <p>{{ view.field.body.value(view.result[loop.index-1]) |striptags }}</p>
+                      <div class="news-date">Published: {{ view.field.field_match_date.value(view.result[loop.index-1]) |date("d/m/Y") | upper }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <a class="left carousel-control" href="#carousel-news" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a> <a class="right carousel-control" href="#carousel-news" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+          </div>
+      </div>
+  </div>
+</div>

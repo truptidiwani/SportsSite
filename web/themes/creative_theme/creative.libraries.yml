@@ -1,0 +1,27 @@
+global-css:
+  css:
+    theme:
+      includes/bootstrap/css/bootstrap.min.css: {}
+      includes/font-awesome/css/font-awesome.min.css: {}
+      includes/magnific-popup/magnific-popup.min.css: {}
+      css/creative.css: {}
+      css/style.css: {}
+
+global-js:
+  js:
+    includes/bootstrap/js/bootstrap.bundle.min.js: {}
+    includes/jquery-easing/jquery.easing.min.js: {}
+    includes/scrollreveal/scrollreveal.min.js: {}
+    includes/magnific-popup/jquery.magnific-popup.min.js: {}
+    js/creative.min.js: {}
+    js/script.js: {}
+
+  dependencies:
+    - core/jquery
+
+font:
+  css:
+    base:
+      '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800': { external: true }
+      '//fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic': { external: true }
+

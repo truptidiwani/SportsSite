@@ -1,0 +1,99 @@
+uuid: ffab56c2-fb87-476e-ad16-a7dd53c76af3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.players.body
+    - field.field.node.players.field_country
+    - field.field.node.players.field_g
+    - field.field.node.players.field_goals_scored
+    - field.field.node.players.field_penalties
+    - field.field.node.players.field_player_age
+    - field.field.node.players.field_player_image
+    - field.field.node.players.field_player_name
+    - field.field.node.players.field_team_2
+    - node.type.players
+  module:
+    - image
+    - text
+    - user
+id: node.players.full
+targetEntityType: node
+bundle: players
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_country:
+    weight: 109
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_g:
+    weight: 106
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_goals_scored:
+    weight: 107
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_penalties:
+    weight: 108
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_player_age:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_player_image:
+    weight: 103
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_player_name:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_team_2: true

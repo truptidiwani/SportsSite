@@ -11,7 +11,7 @@ dependencies:
     - field.field.node.players.field_player_age
     - field.field.node.players.field_player_image
     - field.field.node.players.field_player_name
-    - field.field.node.players.field_team_1
+    - field.field.node.players.field_team_2
     - image.style.thumbnail
     - node.type.players
   module:
@@ -91,8 +91,8 @@ content:
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_team_1:
-    weight: 125
+  field_team_2:
+    weight: 130
     settings:
       match_operator: CONTAINS
       size: 60

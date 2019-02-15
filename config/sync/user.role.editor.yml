@@ -1,0 +1,15 @@
+uuid: 2d993d6e-ace9-4837-93f6-73df52570884
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 3
+is_admin: null
+permissions:
+  - 'access in-place editing'
+  - 'create news_updates content'
+  - 'create players content'
+  - 'create teams content'
+  - 'create winners content'
+  - 'delete any article content'

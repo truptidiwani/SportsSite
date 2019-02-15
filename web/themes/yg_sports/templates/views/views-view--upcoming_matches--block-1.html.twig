@@ -1,0 +1,21 @@
+<div id="upcoming">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div class="upcoming-text text-center">
+          <div class="section-title">
+              <h2>Upcoming Matches</h2>
+          </div>
+          {% for result in view.result %}
+            <div class="col-md-2 col-sm-4 col-xs-12 matches">
+            <span>VS</span>
+            <img src="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" class="img-responsive" />
+              <h2>{{ view.field.title.value(view.result[loop.index-1]) }}</h2>
+              <h4>{{ view.field.field_match_date.value(view.result[loop.index-1]) |date("M d, Y") | upper }}</h4>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

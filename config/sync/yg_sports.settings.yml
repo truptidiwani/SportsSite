@@ -1,0 +1,21 @@
+schemas: {  }
+_core:
+  default_config_hash: 1uFogeFphl0Hg6oVCacZZ8mM_0wMZ7PS_RrmLbK5tf0
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: 'public://indian-super-league-isl-logo_4kjsih8wb4zf1gzf5spbamwp3 (1)_0.png'
+favicon:
+  use_default: 1
+theme_skin: light_blue
+count_phone: '1'
+count_email: '1'
+joinus_description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+joinusurl: '#'
+fb: ''
+twitter: ''
+linkedin: ''

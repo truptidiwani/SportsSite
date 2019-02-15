@@ -1,0 +1,20 @@
+uuid: b07804f0-d0bd-4377-b689-420f503f4a78
+langcode: en
+status: true
+dependencies:
+  theme:
+    - yg_sports
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: yg_sports_local_actions
+theme: yg_sports
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: a7cb711f-077f-476a-84da-f685ca7eae61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.match_schedule
+  module:
+    - text
+id: node.match_schedule.body
+field_name: body
+entity_type: node
+bundle: match_schedule
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

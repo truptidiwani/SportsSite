@@ -1,0 +1,56 @@
+uuid: 02a2ee9e-bd6a-415f-bbc6-dd113eec1ee9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.match_schedule.body
+    - field.field.node.match_schedule.field_location
+    - field.field.node.match_schedule.field_match_date
+    - field.field.node.match_schedule.field_v
+    - node.type.match_schedule
+  module:
+    - datetime
+    - text
+    - user
+id: node.match_schedule.default
+targetEntityType: node
+bundle: match_schedule
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_location:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_match_date:
+    weight: 2
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_v:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

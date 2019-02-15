@@ -1,0 +1,24 @@
+<div id="gallery" class="text-center">
+  <div class="container">
+    <div class="col-md-12">  
+      <div class="section-title">
+        <h2>Gallery</h2>
+      </div>
+      <div class="row">
+        <div class="gallery-items">
+         {% for result in view.result %}
+            <div class="col-sm-4 col-md-3 col-lg-3 col-xs-12">
+              <div class="gallery-item">
+                <div class="hover-bg"> <a href="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" title="Title" data-lightbox-gallery="gallery1">
+                  <div class="hover-text">
+                    <h4>{{ view.field.title.value(view.result[loop.index-1]) }}</h4>
+                  </div>
+                  <img src="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" class="img-responsive" alt="Title"> </a> </div>
+              </div>
+            </div>
+         {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

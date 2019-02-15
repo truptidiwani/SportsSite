@@ -1,0 +1,22 @@
+uuid: 9822e6f3-276d-4564-8f23-45d6739127cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - yg_sports
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: yg_sports_messages
+theme: yg_sports
+region: highlighted
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

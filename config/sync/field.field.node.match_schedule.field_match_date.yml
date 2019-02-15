@@ -1,0 +1,21 @@
+uuid: 7b7981c1-fd3f-40a0-ae03-4d79a1f2f075
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_match_date
+    - node.type.match_schedule
+  module:
+    - datetime
+id: node.match_schedule.field_match_date
+field_name: field_match_date
+entity_type: node
+bundle: match_schedule
+label: 'Match Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

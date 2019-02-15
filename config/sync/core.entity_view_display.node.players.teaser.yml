@@ -5,8 +5,17 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.players.body
+    - field.field.node.players.field_country
+    - field.field.node.players.field_g
+    - field.field.node.players.field_goals_scored
+    - field.field.node.players.field_penalties
+    - field.field.node.players.field_player_age
+    - field.field.node.players.field_player_image
+    - field.field.node.players.field_player_name
+    - field.field.node.players.field_team_2
     - node.type.players
   module:
+    - image
     - text
     - user
 id: node.players.teaser
@@ -17,14 +26,43 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 1
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
+  field_country:
+    type: entity_reference_label
+    weight: 5
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_player_image:
+    type: image
+    weight: 2
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_player_name:
+    type: text_default
+    weight: 3
+    region: content
+    label: above
     settings: {  }
     third_party_settings: {  }
+  links:
+    weight: 0
     region: content
-hidden: {  }
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_g: true
+  field_goals_scored: true
+  field_penalties: true
+  field_player_age: true
+  field_team_2: true

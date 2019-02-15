@@ -1,0 +1,30 @@
+uuid: c14c5df4-5f31-4c9f-b6e2-03a8da53cd9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.match_schedule.body
+    - node.type.match_schedule
+  module:
+    - text
+    - user
+id: node.match_schedule.teaser
+targetEntityType: node
+bundle: match_schedule
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

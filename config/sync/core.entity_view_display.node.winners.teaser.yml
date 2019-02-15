@@ -1,0 +1,29 @@
+uuid: d107215d-d95e-4e1f-af74-4ded75133d06
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.winners.body
+    - node.type.winners
+  module:
+    - text
+    - user
+id: node.winners.teaser
+targetEntityType: node
+bundle: winners
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

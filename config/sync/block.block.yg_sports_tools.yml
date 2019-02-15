@@ -1,0 +1,34 @@
+uuid: 97f11cdb-79b0-4994-8afd-6479ee69a788
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - node
+    - system
+  theme:
+    - yg_sports
+_core:
+  default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
+id: yg_sports_tools
+theme: yg_sports
+region: highlighted
+weight: -5
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: News
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      news_updates: news_updates
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

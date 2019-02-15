@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg3680"
+   width="180"
+   height="50"
+   viewBox="0 0 180 50"
+   sodipodi:docname="yg_sports.svg"
+   inkscape:version="0.92.1 r15371">
+  <metadata
+     id="metadata3686">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3684" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview3682"
+     showgrid="false"
+     showguides="true"
+     inkscape:zoom="3.6158869"
+     inkscape:cx="129.03398"
+     inkscape:cy="52.554557"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3680"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="114.20445,60.622224"
+       orientation="0,1"
+       id="guide4591"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:29.42225647px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.73555642;"
+     x="-3.5533075"
+     y="26.488653"
+     id="text3694"><tspan
+       sodipodi:role="line"
+       id="tspan3692"
+       x="-3.5533075"
+       y="26.488653"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:41.19115829px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold Italic';letter-spacing:-0.73555642px;word-spacing:0px;fill:#ffffff;stroke-width:0.73555642;"
+       dx="0"
+       dy="0">YG Sports</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:29.42225647px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.73555642"
+     x="-1.2106029"
+     y="46.881546"
+     id="text3706"><tspan
+       sodipodi:role="line"
+       x="-1.2106029"
+       y="46.881546"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.69187069px;line-height:3;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:-0.61051184px;fill:#999999;stroke-width:0.73555642"
+       id="tspan3708">Premium Drupal Theme</tspan></text>
+  <path
+     style="fill:#ff3123;fill-opacity:1;stroke:none;stroke-width:0.82225072px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 146.9954,3.307136 c 0,0 5.25889,0.301184 7.77599,2.323438 2.51708,2.022252 0.78967,7.095462 0.78967,7.095462 l 24.4386,-12.681175 -40.36288,1.120068 z"
+     id="path3724"
+     inkscape:connector-curvature="0" />
+</svg>

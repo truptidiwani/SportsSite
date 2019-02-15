@@ -1,0 +1,243 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+
+function yg_sports_preprocess_page(&$variables) {
+  $phone_numbers = [];
+  $emails = [];
+  $block_id = 2;
+  global $base_path;
+  $variables['logopath'] = $base_path . drupal_get_path('theme','yg_sports') . '/yg_logo.svg';
+  $variables['joinus_description'] = !empty(theme_get_setting('joinus_description')) ? theme_get_setting('joinus_description') : 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
+  $variables['joinusurl'] = theme_get_setting('joinusurl');
+  // $block = \Drupal\block\Entity\Block::load('contactblock');
+  // // $block_content = \Drupal::entityManager()
+  // // ->getViewBuilder('block')
+  // // ->view($block);
+
+// if(!empty($block_id)) {
+//  $block = \Drupal\block\Entity\Block::load($block_id);
+//   $block_content = \Drupal::entityManager()
+//   ->getViewBuilder('block_content')
+//   ->view($block);
+//    $variables['map'] = $block;
+// }
+  // $variables['contact'] = $block_content;
+  $phone_counts = theme_get_setting('count_phone');
+  $email_counts = theme_get_setting('count_email');
+  for ($i=1; $i <= $phone_counts; $i++) {
+    if(theme_get_setting("phone$i") != '')
+    $phone_numbers[] = !empty(theme_get_setting("phone$i")) ? theme_get_setting("phone$i") : '123456789';
+  }
+  for ($i=1; $i <= $email_counts; $i++) {
+    if(theme_get_setting("email$i") != '')
+    $emails[] = !empty(theme_get_setting("email$i")) ? theme_get_setting("email$i") : 'example@example.com';
+  }
+  $variables['phone_numbers'] = $phone_numbers;
+  $variables['emails'] = $emails;
+  $variables['facebook_url'] = !empty(theme_get_setting('fb')) ? theme_get_setting('fb') : 'http://facebook.com';
+  $variables['twitter_url'] = !empty(theme_get_setting('twitter')) ? theme_get_setting('twitter') : 'http://twitter.com';
+  $variables['linkedin'] = !empty(theme_get_setting('linkedin')) ? theme_get_setting('linkedin') : 'http://linkedin.com';
+
+}
+
+/**
+ * Implements hook_theme().
+ */
+function yg_sports_theme($existing, $type, $theme, $path) {
+  return [
+    'FORM_ID_THEME' => [
+      'template' => 'custom-form-template-name',
+      'render element' => 'form',
+    ]
+  ];
+}
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function yg_sports_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form['#attached']['library'][] = 'yg_sports/young_sports_admin';
+  $form['core'] = array(
+    '#type' => 'vertical_tabs',
+    '#attributes' => array('class' => array('entity-meta')),
+    '#weight' => -899
+  );
+
+  $form['theme_settings']['#group'] = 'core';
+  $form['logo']['#group'] = 'core';
+  $form['favicon']['#group'] = 'core';
+
+  $form['theme_settings']['#open'] = FALSE;
+  $form['logo']['#open'] = FALSE;
+  $form['favicon']['#open'] = FALSE;
+  // Custom settings in Vertical Tabs container
+  $form['options'] = array(
+    '#type' => 'vertical_tabs',
+    '#attributes' => array('class' => array('entity-meta')),
+    '#weight' => -999,
+    '#default_tab' => 'edit-variables',
+    '#states' => array(
+      'invisible' => array(
+       ':input[name="force_subtheme_creation"]' => array('checked' => TRUE),
+      ),
+    ),
+  );
+  //Customize color ----------------------------------
+
+  $form['options']['settings_customize'] = array(
+    '#type' => 'details',
+    '#attributes' => array(),
+    '#title' => t('Settings Customize'),
+    '#weight' => -997,
+    '#group' => 'options',
+    '#open' => TRUE,
+  );
+
+   $form['options']['settings_customize']['theme_skin'] = array(
+    '#type' => 'select',
+    '#title' => t('Theme Skin'),
+    '#default_value' => theme_get_setting('theme_skin'),
+    '#group' => 'settings',
+    '#options'      => array(
+      ''            => t('Default'),
+      'light_blue'  => t('Light Blue'),      
+      'blue'        => t('Blue'),
+      'brown'       => t('Brown'),
+      'green'       => t('Green'),
+      'lilac'       => t('Lilac'),
+      'lime_green'  => t('Lime Green'),
+      'orange'      => t('Orange'),
+      'pink'        => t('Pink'),
+      'purple'      => t('Purple'),
+      'red'         => t('Red'),
+      'turquoise'   => t('Turquoise'),
+      'turquoise2'  => t('Turquoise2'),
+      'violet_red'  => t('Violet Red'),
+      'violet_red2' => t('Violet Red2'),
+      'yellow'      => t('Yellow'),
+    ),
+  );
+  $form['sports_settings']['footer'] = array(
+    '#type' => 'details',
+    '#title' => t('Theme Settings'),
+    '#collapsible' => FALSE,
+    '#collapsed' => TRUE,
+    '#group' => 'options',
+  );
+  $form['sports_settings']['footer']['callus'] = array(
+    '#type' => 'details',
+    '#title' => t('Call Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['sports_settings']['footer']['mailus'] = array(
+    '#type' => 'details',
+    '#title' => t('Email Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['sports_settings']['footer']['joinus'] = array(
+    '#type' => 'details',
+    '#title' => t('Join Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['sports_settings']['footer']['callus']['count_phone'] = array(
+    '#type' => 'number',
+    '#title' => t('No.of Phone Numbers'),
+    '#default_value' => !empty(theme_get_setting('count_phone')) ? theme_get_setting('count_phone') : 1,
+    '#min' => 1,
+    '#description' => t('Enter how many phone numbers you want show in the footer of the website. Please save this form once you enter this field'),
+  );
+  $form['sports_settings']['footer']['mailus']['count_email'] = array(
+    '#type' => 'number',
+    '#title' => t('No.of Email Address'),
+    '#default_value' => !empty(theme_get_setting('count_email')) ? theme_get_setting('count_email') : 1,
+    '#min' => 1,
+    '#description' => t('Enter how many email address you want show in the footer of the website. Please save this form once you enter this field'),
+  );
+  for ($i = 1; $i <= theme_get_setting('count_phone'); $i++) {
+    $form['sports_settings']['footer']['callus']["phone$i"] = array(
+      '#type' => 'tel',
+      '#title' => t("Phone number $i"),
+      '#default_value' => !empty(theme_get_setting("phone$i")) ? theme_get_setting("phone$i") : '123456789',
+    );
+  }
+  for ($i = 1; $i <= theme_get_setting('count_email'); $i++) {
+    $form['sports_settings']['footer']['mailus']["email$i"] = array(
+      '#type' => 'email',
+      '#title' => t("Email address $i"),
+      '#default_value' => !empty(theme_get_setting("email$i")) ? theme_get_setting("email$i") : 'example@example.com',
+    );
+  }
+  $form['sports_settings']['footer']['fb'] = array(
+    '#type' => 'url',
+    '#title' => t('Facebook URL'),
+    '#default_value' => theme_get_setting('fb'),
+  );
+  $form['sports_settings']['footer']['twitter'] = array(
+    '#type' => 'url',
+    '#title' => t('Twitter URL'),
+    '#default_value' => theme_get_setting('twitter'),
+  );
+  $form['sports_settings']['footer']['linkedin'] = array(
+    '#type' => 'url',
+    '#title' => t('Linkedin URL'),
+    '#default_value' => theme_get_setting('linkedin'),
+  );
+  $form['sports_settings']['footer']['joinus']['joinus_description'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Join us description'),
+    '#default_value' => !empty(theme_get_setting('joinus_description')) ? theme_get_setting('joinus_description') : 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+  );
+  $form['sports_settings']['footer']['joinus']['joinusurl'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Join us URL'),
+    '#default_value' => !empty(theme_get_setting('joinusurl')) ? theme_get_setting('joinusurl') : '#',
+  );
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Adds body classes if certain regions have content.
+ */
+function yg_sports_preprocess_html(&$variables) {
+  global $theme;
+  $theme_path = drupal_get_path('theme', 'yg_sports');
+
+
+  $current_url = $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
+  $current_url = preg_replace('/([?&])display=[^&]+(&|$)/','$2',$current_url);
+  if(strpos($current_url, '?')){
+     $current_url .= '&';
+  }
+  else{
+     $current_url .= '?';
+  }
+  $variables['current_url'] = $current_url;
+  $variables['addon_template'] = '';
+  if(file_exists($theme_path . '/templates/addon/skins.html.twig')){
+    $variables['addon_template'] = 'themes/yg_sports/templates/addon/skins.html.twig';
+  }
+  $skin = 'default';
+  $skin = theme_get_setting('theme_skin');
+  if(isset($_GET['color']) && $_GET['color']){
+    $skin = $_GET['color'];
+  }
+  if(empty($skin)){
+    $skin = 'default';
+  }
+  $variables['#attached']['library'][] = 'yg_sports/young_sports.skin.' . $skin;
+  
+}
+
+function yg_sports_form_alter( &$form, &$form_state, $form_id ) {
+  if ( TRUE === in_array( $form_id, array( 'comment_form') ) ) {
+    $form['comment_body']['widget']['0']['#title_display'] = t('');
+  }
+
+  
+}

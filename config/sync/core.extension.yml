@@ -1,4 +1,7 @@
 module:
+  admin_toolbar: 0
+  admin_toolbar_links_access_filter: 0
+  admin_toolbar_tools: 0
   automated_cron: 0
   big_pipe: 0
   block: 0
@@ -12,6 +15,8 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  devel: 0
+  devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
@@ -51,6 +56,7 @@ theme:
   creative: 0
   premier_league: 0
   professional_theme: 0
+  yg_sports: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

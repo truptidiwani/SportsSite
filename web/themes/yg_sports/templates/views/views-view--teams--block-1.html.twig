@@ -1,0 +1,20 @@
+<!-- Team Section -->
+<div id="team" class="text-center">
+  <div class="container">
+    <div class="col-md-12 section-title">
+      <h2>TEAM</h2>
+    </div>
+    <div id="row">
+      <div class="center">
+      {% for result in view.result %}
+        <div class="col-md-2 col-sm-6">
+          <div class="player-img"><img src="{{ file_url(view.field.uri.value(view.result[loop.index-1])) }}" class="img-responsive" alt="{{ view.field.title.value(view.result[loop.index-1]) }}"></div>
+          <div class="caption">
+          <h2>{{ view.field.title.value(view.result[loop.index-1]) }}</h2>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

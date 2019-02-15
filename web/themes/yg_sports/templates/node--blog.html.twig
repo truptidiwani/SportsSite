@@ -1,0 +1,22 @@
+<div id="blog">
+  <div class="container blog-container">
+    <div class="row">
+        <div class="col-lg-8">
+            <h3>{{ node.title.value }}</h3>
+            <p class="blog-info">Posted: {% if date %}  {{ date }} {% endif %} | By <a href="#">{{ node.Owner.name.value }}</a></p>
+            <img class="img-responsive" src="{{content.field_image.0}}" class="img-responsive" width="100%" alt=""><br />
+            <p class="lead">{{ content.body }} </p>
+            <div class="row col-md-12 other-comments">
+                           
+                {{ content.field_blog_comments }} 
+            </div>           
+        </div>
+        <div class="col-md-4">
+                <h3>Other Posts</h3>  
+                <div class="row">
+                    <dd>{{ drupal_view('blog', 'block_2') }}</dd>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

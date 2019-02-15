@@ -1,0 +1,171 @@
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+{% if page.navigation or page.navigation_collapsible %}
+  {% block navbar %}
+    <div class="navbar-header">
+        {{ page.navigation }}
+        {# .btn-navbar is used as the toggle for collapsed navbar content #}
+        {% if page.navigation_collapsible %}
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        {% endif %}
+        <a class="navbar-brand page-scroll" href="#home"><img src="{{ logopath }}" class="img-responsive" alt="logo" title="logo"></a>
+      </div>
+      {# Navigation (collapsible) #}
+      {% if page.navigation_collapsible %}
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+          {{ page.navigation_collapsible }}
+    </div>
+      {% endif %}
+  {% endblock %}
+{% endif %}
+  </div>
+</nav>
+{# Main #}
+{% block main %}
+  <div role="main" class="blog-container js-quickedit-main-content">
+    <div class="">
+      {# Header #}
+      {% if page.header %}
+        {% block header %}
+          <div class="col-sm-12" role="heading">
+            {{ page.header }}
+          </div>
+        {% endblock %}
+      {% endif %}
+      {# Sidebar First #}
+      {% if page.sidebar_first %}
+        {% block sidebar_first %}
+          <aside class="col-sm-3" role="complementary">
+            {{ page.sidebar_first }}
+          </aside>
+        {% endblock %}
+      {% endif %}
+      {# Content #}
+      {%
+        set content_classes = [
+          page.sidebar_first and page.sidebar_second ? 'col-sm-6',
+          page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
+          page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
+          page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
+        ]
+      %}
+      <section>
+        {# Highlighted #}
+        {% if page.highlighted %}
+          {% block highlighted %}
+            <div class="highlighted">{{ page.highlighted }}</div>
+          {% endblock %}
+        {% endif %}
+        {# Breadcrumbs #}
+        {% if breadcrumb %}
+          {% block breadcrumb %}
+            {{ breadcrumb }}
+          {% endblock %}
+        {% endif %}
+        {# Action Links #}
+        {% if action_links %}
+          {% block action_links %}
+            <ul class="action-links">{{ action_links }}</ul>
+          {% endblock %}
+        {% endif %}
+        {# Help #}
+        {% if page.help %}
+          {% block help %}
+            {{ page.help }}
+          {% endblock %}
+        {% endif %}
+        {# Content #}
+        {% block content %}
+          <a id="main-content"></a>
+          {{ page.content }}
+        {% endblock %}
+      </section>
+      {# Sidebar Second #}
+      {% if page.sidebar_second %}
+        {% block sidebar_second %}
+          <aside class="col-sm-3" role="complementary">
+            {{ page.sidebar_second }}
+          </aside>
+        {% endblock %}
+      {% endif %}
+   </div>
+ </div>
+{% endblock %}
+<div id="join" class="text-center">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-10 col-sm-8 text-left">
+       <p>{{ joinus_description }}</p>
+        </div>
+        <div class="col-md-2 col-sm-4">
+          <a href='{{ joinusurl }}' class="btn btn-custom center-block btn-lg">JOIN US</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="contact" class="text-center">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+        <div class="col-md-4">
+        {% if page.footer_left %}
+          {{ page.footer_left }}
+        {% endif %}
+        </div>
+        <div class="col-md-6">
+        {% if page.footer_middle %}
+          <div id="map">
+            {{ page.footer_middle }}
+          </div>
+        {% endif %}
+        </div>
+    <div class="col-md-2 text-left call-us">
+        <div class="widget col-md-12 col-sm-4 col-xs-12">
+        <h2>Call Us</h2>
+        {% for number in phone_numbers %}
+          <h4>{{ number }}</h4>
+        {% endfor %}
+      </div>
+      <div class="widget col-md-12 col-sm-4 col-xs-12">
+        <h2>Mail Us</h2>
+        {% for email in emails %}
+          <h4><a href="mailto:{{ email }}">{{ email }}</a></h4>
+        {% endfor %}
+      </div>
+      <div class="widget col-md-12 col-sm-4 col-xs-12">
+        <h2>Follow Us</h2>
+        <div class="social-links">
+        <a href="{{ facebook_url }}" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="{{ twitter_url }}" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="{{ linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  {% if page.footer %}
+    {% block footer %}
+      <footer class="footer {{ container }}" role="contentinfo">
+        {{ page.footer }}
+      </footer>
+    {% endblock %}
+  {% endif %}
+  <div class="container text-center">
+    <p>&copy; 2017. All Rights Reserved.<br />Theme Powered By <a href="http://www.youngglobes.com" target="_blank">Young Globes</a></p>
+  </div>
+</div>
+<a id="back-to-top" href="#home" class="btn btn-custom page-scroll" role="button" title="Go To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>

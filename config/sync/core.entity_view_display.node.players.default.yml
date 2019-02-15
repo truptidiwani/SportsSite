@@ -11,7 +11,8 @@ dependencies:
     - field.field.node.players.field_player_age
     - field.field.node.players.field_player_image
     - field.field.node.players.field_player_name
-    - field.field.node.players.field_team_1
+    - field.field.node.players.field_team_2
+    - image.style.medium
     - node.type.players
   module:
     - image
@@ -77,7 +78,7 @@ content:
     weight: 103
     label: above
     settings:
-      image_style: ''
+      image_style: medium
       image_link: ''
     third_party_settings: {  }
     type: image
@@ -89,8 +90,8 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_team_1:
-    weight: 105
+  field_team_2:
+    weight: 110
     label: above
     settings:
       link: true
@@ -99,7 +100,7 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

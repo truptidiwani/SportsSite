@@ -1,0 +1,10 @@
+features:
+  node_user_picture: true
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+logo:
+  use_default: false
+  path: 'public://indian-super-league-isl-logo_4kjsih8wb4zf1gzf5spbamwp3 (1)_0.png'
+favicon:
+  use_default: true

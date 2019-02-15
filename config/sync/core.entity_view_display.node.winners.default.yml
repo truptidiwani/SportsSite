@@ -1,0 +1,28 @@
+uuid: 78ebd590-5e4d-44ac-a16f-98b3f7e0b133
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.winners.body
+    - node.type.winners
+  module:
+    - text
+    - user
+id: node.winners.default
+targetEntityType: node
+bundle: winners
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

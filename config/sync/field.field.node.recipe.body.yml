@@ -1,0 +1,22 @@
+uuid: 8c38bf92-3015-4f55-9f9d-e9c2dbd0870e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.recipe
+  module:
+    - text
+id: node.recipe.body
+field_name: body
+entity_type: node
+bundle: recipe
+label: Ingredients
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

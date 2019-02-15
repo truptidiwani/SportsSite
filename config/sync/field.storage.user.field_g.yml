@@ -1,0 +1,20 @@
+uuid: fe6afd9c-3ade-4d32-b69b-9dc4fcfaeb5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: user.field_g
+field_name: field_g
+entity_type: user
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
