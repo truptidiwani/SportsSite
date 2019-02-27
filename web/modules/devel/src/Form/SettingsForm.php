@@ -19,7 +19,7 @@ class SettingsForm extends ConfigFormBase {
    *
    * @var \Drupal\devel\DevelDumperPluginManager
    */
-  protected $dumperManager;
+    protected $dumperManager;
 
   /**
    * Constructs a new SettingsForm object.
@@ -155,10 +155,10 @@ class SettingsForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $values = $form_state->getValues();
-    $this->config('devel.settings')
-      ->set('page_alter', $values['page_alter'])
+    public function submitForm(array &$form, FormStateInterface $form_state) {
+              $values = $form_state->getValues();
+          $this->config('devel.settings')
+               ->set('page_alter', $values['page_alter'])
       ->set('raw_names', $values['raw_names'])
       ->set('error_handlers', $values['error_handlers'])
       ->set('rebuild_theme', $values['rebuild_theme'])
