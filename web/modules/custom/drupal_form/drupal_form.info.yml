@@ -1,0 +1,6 @@
+name: Custom form
+description: A custom form  example.
+core: 8.x
+type: module
+
+

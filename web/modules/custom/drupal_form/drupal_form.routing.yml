@@ -1,0 +1,22 @@
+drupal_form.form:
+  path: '/admin/myform'
+  defaults:
+    _title: 'Example form'
+    _form: 'Drupal\drupal_form\Form\SimpleForm'
+  requirements: 
+    _permission: 'access content'
+drupal_form.baseform:
+  path: '/drupal_form/baseform'
+  defaults:
+    _title: 'Base form'
+    _form: 'Drupal\drupal_form\Form\BaseForm'
+  requirements: 
+    _permission: 'access content'
+drupal_form.content:
+  path: '/drupal_form/hello'
+  defaults:
+    _title: 'Hello form'
+    _controller: 'Drupal\drupal_form\Controller\HelloController::content'
+  requirements: 
+    _permission: 'access content'
+ 

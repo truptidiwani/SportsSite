@@ -1,0 +1,5 @@
+name: Example 
+description: A form API example.
+core : 8.x
+package : custom
+type : module
