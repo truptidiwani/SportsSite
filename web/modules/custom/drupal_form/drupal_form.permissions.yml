@@ -1,0 +1,4 @@
+Trupti access content:
+  title: 'Access Permissions example'
+  description: 'Accessing permission in yml.'
+  restrict access: TRUE

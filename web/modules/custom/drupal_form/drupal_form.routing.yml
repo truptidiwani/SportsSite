@@ -4,19 +4,36 @@ drupal_form.form:
     _title: 'Example form'
     _form: 'Drupal\drupal_form\Form\SimpleForm'
   requirements: 
-    _permission: 'access content'
+    _permission: ' access content'
+
+drupal_form.upcastform:
+  path: '/mynode/{node}'
+  defaults:
+    _title: 'Upcast Form'
+    _controller: '\Drupal\drupal_form\Controller\UpcastController::upcast'  
+  requirements: 
+    _permission: 'access content' 
+
 drupal_form.baseform:
   path: '/drupal_form/baseform'
   defaults:
     _title: 'Base form'
     _form: 'Drupal\drupal_form\Form\BaseForm'
   requirements: 
-    _permission: 'access content'
+    _permission: ' access content'
 drupal_form.content:
   path: '/drupal_form/hello'
   defaults:
     _title: 'Hello form'
     _controller: 'Drupal\drupal_form\Controller\HelloController::content'
   requirements: 
-    _permission: 'access content'
+    _permission: 'Trupti access content'
+drupal_form.contentname:
+  path: '/drupal_form/{name}'
+  defaults:
+    _title: 'Dynamic form'
+    _controller: 'Drupal\drupal_form\Controller\DynamicController::content'
+  requirements: 
+    _permission: 'Trupti access content'
+
  
