@@ -11,12 +11,12 @@ class BaseForm extends FormBase {
    
 protected $loggerFactory;
 
-public function __construct(LoggerChannelFactory $loggerFactory) {
-    $this->loggerFactory = $loggerFactory->get('formdata');
-  }
-  public static function create(ContainerInterface $container){
-    return new static ($container->get('logger.factory'));
-  }
+    public function __construct(LoggerChannelFactory $loggerFactory) {
+       $this->loggerFactory = $loggerFactory->get('myform_data');
+     }
+     public static function create(ContainerInterface $container){
+       return new static ($container->get('logger.factory'));
+     }
     public function getFormId()
     {
         return 'drupal_form';

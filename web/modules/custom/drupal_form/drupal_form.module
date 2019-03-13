@@ -1,0 +1,47 @@
+<?php
+use Drupal\node\NodeInterface;
+
+function drupal_form_node_insert(NodeInterface $node) {
+    $title=$node->getTitle();
+    $title = str_replace(' ', '_', $title);
+    $title = preg_replace('/[^A-Za-z0-9\_]/', '', $title);
+    $title = strtolower($title);
+     $node->set('site', $title)->save();
+}
+
+/*Implementation hook_entity_view()*/
+function drupal_form_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+    
+    if($entity->getEntityType()->id()==='node'){
+        $build['awesome']=[
+            '#markup' => '<marquee>its the first implementation of hook</marquee>',
+            '#allowed_tags'=> ['marquee'],
+        ];
+    }
+    
+  }
+function drupal_form_node_update(NodeInterface $node) {
+      $title=$node->getTitle();
+      \Drupal::logger('drupal_form')->alert($title);
+}
+function drupal_form_user_update(Drupal\Core\Entity\EntityInterface $entity) {
+    //kint($entity);
+    //$id=$entity->id();
+   // print_r($id);
+    $uid=$entity->id();
+    $nids = \Drupal::entityQuery('node')->condition('uid',$uid)->execute();
+    //kint($nids);
+
+    foreach ($nids as $nid) {
+    $node = \Drupal\node\Entity\Node::load($nid);
+    $body = $node->body->value;
+    $title=$node->title->value;
+    //print_r($title);
+    //print_r( $node->title->value);
+    $log= $node->title->value;
+    \Drupal::logger('drupal_form')->info($log);
+}  
+
+}
+    
+  
